@@ -23,7 +23,7 @@ export const test = base.extend<AuthenticatedPageFixture>({
     const accountCreationPage = new AccountCreationPage(page);
 
     await shopHomePage.goto();
-    await shopHomePage.giveConsent();
+    // await shopHomePage.giveConsent();
     await shopHomePage.dismissPopups(page);
     await shopHomePage.assertOnHomePage();
     await shopHomePage.openLoginPage();

@@ -97,7 +97,7 @@ pwTest.describe('Final Task tests that do not depend on the authenticated fixtur
         const shopHomePage = new ShopHomePage(page);
 
         await shopHomePage.goto();
-        await shopHomePage.giveConsent();
+        // await shopHomePage.giveConsent();
         await shopHomePage.assertOnHomePage();
     });
     pwTest('TC-SHOP-002 — Search: keyword search returns only matching products', async({ page })=>{
