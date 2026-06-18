@@ -34,6 +34,7 @@ export const test = base.extend<AuthenticatedPageFixture>({
     await accountCreationPage.createAccount();
     await accountCreationPage.assertAccountHasBeenSuccessfullyCreated();
     await accountCreationPage.continueAfterConfirmation();
+    await shopHomePage.dismissPopups(page);
     await shopHomePage.assertUserIsLoggedUponAccountCreation(user.name);
 
     try {

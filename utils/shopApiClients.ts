@@ -44,10 +44,10 @@ interface ShopUser{
 }
 
 export class ShopAPIClients{
-    readonly BASE_URL = "https://automationexercise.com/api";
+    readonly BASE_URL: string | undefined;
 
     constructor(private readonly request: APIRequestContext){
-
+      this.BASE_URL = process.env.API_URL;
     }
 
     async getAllProducts(): Promise<ProductResponse>{

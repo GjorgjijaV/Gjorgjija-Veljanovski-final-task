@@ -26,7 +26,9 @@ authTest.describe('Final Task tests that depend on authenticated fixture',{ tag:
         const paymentConfirmationPage = new PaymentConfirmationPage(authenticatedShopPage);
         
         await shopHomePage.openProductsPage();
+        await shopHomePage.dismissPopups(authenticatedShopPage);
         await productPage.assertOnProductsPage();
+        await productPage.dismissPopups(authenticatedShopPage);
         await productPage.hoverOverAProduct(0);
         await productPage.addProductToCart(1);
         await productPage.viewCart();
@@ -125,6 +127,7 @@ pwTest.describe('Final Task tests that do not depend on the authenticated fixtur
         const cartPage = new CartPage(page);
 
         await shopHomePage.openProductsPage();
+        await productsPage.dismissPopups(page);
         await productsPage.assertOnProductsPage();
         await productsPage.hoverOverAProduct(0);
         await productsPage.addProductToCart(1);
