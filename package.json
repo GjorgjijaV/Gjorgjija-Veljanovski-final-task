@@ -1,0 +1,29 @@
+{
+  "name": "gjorgjija-veljanovski-final-task",
+  "version": "1.0.0",
+  "description": "Final task project repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GjorgjijaV/Gjorgjija-Veljanovski-final-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GjorgjijaV/Gjorgjija-Veljanovski-final-task/issues"
+  },
+  "homepage": "https://github.com/GjorgjijaV/Gjorgjija-Veljanovski-final-task#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.3",
+    "allure-playwright": "^3.10.0"
+  }
+}
